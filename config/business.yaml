@@ -1,0 +1,29 @@
+# Configuración del negocio — Generado por AgentKit
+negocio:
+  nombre: "Crecimiento Exponencial"
+  descripcion: "Servicio argentino que ayuda a personas y marcas a crecer en redes sociales. Venta de seguidores, likes, views, comentarios, compartidos y más para Instagram, TikTok, Facebook, YouTube, Spotify y Telegram."
+  web: "www.crecimientoexponencial2026.com"
+  instagram: "https://www.instagram.com/crecimientoexponencial.arg"
+  whatsapp: "+54 9 351 326-9964"
+  slogan: "Hacemos crecer tus redes"
+  estadisticas: "+5.000 clientes | +6 plataformas | Entrega en -24hs | 100% garantía"
+  pago: "Transferencia bancaria en ARS (sin tarjetas ni cargos extra)"
+  alias_pago: "Crecimiento.exp2026"
+  titular_pago: "Laureano Marquez"
+  cuenta_pago: "Lemon"
+  horario: "24/7"
+
+agente:
+  nombre: "Franco"
+  tono: "Amigable, cálido, rioplatense (vos, che). Breve y directo. Emojis con moderación."
+  casos_de_uso:
+    - "Atender leads de Meta Ads"
+    - "Seguir flujo de venta de 8 pasos"
+    - "Enviar imágenes de precios por red social"
+    - "Cerrar ventas"
+    - "Responder objeciones"
+    - "Seguimiento post-venta"
+
+metadata:
+  creado: "2026-04-08"
+  version: "1.0"
