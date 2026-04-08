@@ -13,8 +13,13 @@ __pycache__/
 venv/
 
 # Knowledge (archivos privados del negocio)
+# Las imágenes de precios se incluyen para producción
 knowledge/*
 !knowledge/.gitkeep
+!knowledge/*.jpg
+!knowledge/*.JPG
+!knowledge/*.png
+!knowledge/*.PNG
 
 # Session state
 config/session.yaml
