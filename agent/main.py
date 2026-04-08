@@ -84,13 +84,12 @@ async def enviar_respuesta_multiple(telefono: str, respuesta: str):
         await proveedor.enviar_mensaje(telefono, parte)
         logger.info(f"Mensaje {i+1}/{len(partes)} enviado a {telefono}")
 
-        # Si hay imágenes para enviar, las mandamos después del primer mensaje
+        # Si hay imágenes para enviar, las mandamos juntas después del primer mensaje
         if red_social and i == 0:
             imagenes = obtener_imagenes_red(red_social)
             for img_ruta in imagenes:
                 await proveedor.enviar_imagen(telefono, img_ruta)
                 logger.info(f"Imagen enviada: {os.path.basename(img_ruta)}")
-                await asyncio.sleep(1)
 
         # Pequeña pausa entre mensajes para que lleguen en orden
         if i < len(partes) - 1:
