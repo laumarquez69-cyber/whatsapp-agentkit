@@ -58,6 +58,13 @@ async def procesar_mensaje(telefono: str, texto: str, mensaje_id: str, tiene_ima
     # Generar respuesta con Claude
     respuesta = await generar_respuesta(texto, historial)
 
+    # Si Claude indica que la conversación terminó, no enviar nada
+    if "[CONVERSACION_FINALIZADA]" in respuesta:
+        logger.info(f"Conversación finalizada con {telefono} — no se envía respuesta")
+        await guardar_mensaje(telefono, "user", texto)
+        await guardar_mensaje(telefono, "assistant", "[conversación finalizada]")
+        return
+
     # Guardar mensaje del usuario Y respuesta del agente en memoria
     await guardar_mensaje(telefono, "user", texto)
     await guardar_mensaje(telefono, "assistant", respuesta)
